@@ -31,7 +31,7 @@ export function HeroSection() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(56, 189, 248, 0.15) 0%, transparent 50%)`,
+            background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(30, 58, 138, 0.15) 0%, transparent 50%)`,
           }}
         />
       </div>
@@ -60,20 +60,24 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 group px-8"
-            >
-              Start Your Transformation
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary hover:border-primary/50 transition-all duration-300 bg-transparent"
-            >
-              Explore Services
-            </Button>
+            <a href="#contact" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 group px-8"
+              >
+                Start Your Transformation
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
+            <a href="#services" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full border-border text-foreground hover:bg-secondary hover:border-primary/50 transition-all duration-300 bg-transparent"
+              >
+                Explore Services
+              </Button>
+            </a>
           </div>
 
           <div className="pt-12 grid grid-cols-3 gap-8 max-w-lg mx-auto">

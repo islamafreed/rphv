@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { RPHLogo } from "@/components/rph-logo"
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -33,12 +34,9 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
-              <span className="text-primary-foreground font-bold text-lg">R</span>
-            </div>
-            <span className="text-foreground font-semibold text-xl tracking-tight">RPH Ventures</span>
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <a href="#" className="flex-shrink-0">
+            <RPHLogo size="md" />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -51,9 +49,11 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
-              Get Started
-            </Button>
+            <a href="#contact" className="flex-shrink-0">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25">
+                Get Started
+              </Button>
+            </a>
           </div>
 
           <button className="md:hidden text-foreground p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -68,18 +68,20 @@ export function Navbar() {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="px-4 py-4 space-y-4">
+        <div className="px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium py-2"
+              className="block text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium py-2 px-2 rounded hover:bg-secondary/50"
             >
               {link.label}
             </a>
           ))}
-          <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
+          <a href="#contact" className="block pt-2">
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
+          </a>
         </div>
       </div>
     </nav>
