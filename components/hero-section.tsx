@@ -25,11 +25,19 @@ export function HeroSection() {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Subtle Background Image */}
+<div
+  className="absolute inset-0 bg-cover bg-center opacity-100"
+  style={{
+    backgroundImage: "url('/hero1.png')",
+  }}
+/>
+
       {/* Animated Background */}
       <div className="absolute inset-0">
         <AnimatedGridPattern />
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-20"
           style={{
             background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(30, 58, 138, 0.15) 0%, transparent 50%)`,
           }}
