@@ -37,7 +37,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <AnimatedGridPattern />
         <div
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-60"
           style={{
             background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(30, 58, 138, 0.15) 0%, transparent 50%)`,
           }}
