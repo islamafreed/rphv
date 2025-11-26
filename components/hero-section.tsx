@@ -59,8 +59,8 @@ export function HeroSection() {
 
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
-            <span className="text-foreground">Innovate.</span> <span className="text-primary">Elevate.</span>{" "}
-            <span className="text-foreground">Succeed.</span>
+            <span className="text-foreground">Innovate</span> <span className="text-primary">Elevate</span>{" "}
+            <span className="text-foreground">Succeed</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed">
